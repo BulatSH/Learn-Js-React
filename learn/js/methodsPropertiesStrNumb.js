@@ -1,5 +1,7 @@
 'use strict';
 
+// методы - это действия
+
 const str = 'Test test';
 
 console.log(str.length); // 4 // Свойства никак не вызываются

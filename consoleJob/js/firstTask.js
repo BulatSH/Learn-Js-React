@@ -24,7 +24,7 @@ const personalMovieDB = {
 
 function rememberMyFilms () {
     for (let i = 0; i < questions; i++) {
-        const oneOfTheLastFirstFilm = prompt('Один из последних просмотренных фильмов?', ''),
+        const oneOfTheLastFirstFilm = prompt('Один из последних просмотренных фильмов?', '').trim(), // trim() - метод, который обрезает пробелы в начале и в конце строки
         oneOfTheLastFirstFilmRate = prompt('На сколько оцените его?', '');
     
         if (oneOfTheLastFirstFilm != null && oneOfTheLastFirstFilmRate != null && 
