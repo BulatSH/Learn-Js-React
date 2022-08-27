@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script defer src="dynamicScripts.js"></script> -->
+    <!-- Можно пометсить в head -->
+    <!-- defer сообщает браузеру, что он должен продолжать обрабатывать страницу и загружать скрипт в фоновом режиме, а затем запустить этот скрипт, когда он загрузится -->
+    <!-- Скрипты с defer никогда не блокируют страницу  -->
+    <!-- Скрипты с таким атрибутом всегда выполняются всегда после того, как DOM дерево будет готово -->
+    <!-- Срабатывают до событи DOMContentLoaded -->
+    <!-- <script defer src="test.js"></script> -->
+    <!-- Несмотря на то, что в test.js меньше кода, чем в dynamicScripts.js, скрипты всегда будут выполняться последовательно -->
+
+
+    <!-- <script async src="dynamicScripts.js"></script> -->
+    <!-- <script async src="test.js"></script> -->
+    <!-- Страница не ждет ассинхронных (async) скриптов -->
+    <!-- Событие DOMContentLoaded и async скрипты не ждут друг друга -->
+    <!-- Загружаются в фоновом режиме, и запускаются сразу, как только загрузится, независимые скрипты -->
+    <!-- Полезно, если скрипты не подвязаны к DOM структуре и не зависят от других скриптов, например метрики и счетчики -->
+
+
+    <p>Hello World!</p>
+    <p>Second message</p>
+
+    <script async src="dynamicScripts.js"></script>
+</body>
+</html>
