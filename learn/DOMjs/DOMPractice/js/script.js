@@ -14,6 +14,19 @@
 
 'use strict';
 
+const adBlocks = document.querySelectorAll('.promo__adv img'),
+    poster = document.querySelector('.promo__bg'),
+    genre = poster.querySelector('.promo__genre'),
+    movies = document.querySelector('.promo__interactive-list');
+
+adBlocks.forEach(adBlock => {
+    adBlock.remove();
+});
+
+genre.textContent = 'Драма';
+
+poster.style.backgroundImage = 'url("img/bg.jpg")'; // не ../ т.к. js формируется относительно html
+
 const movieDB = {
     movies: [
         "Логан",
@@ -23,4 +36,17 @@ const movieDB = {
         "Скотт Пилигрим против..."
     ]
 };
+
+movies.innerHTML = '';
+movieDB.movies.sort();
+
+movieDB.movies.forEach((movie, i) => {
+    movies.innerHTML += `
+        <li class="promo__interactive-item">
+            ${i + 1} ${movie}
+            <div class="delete"></div>
+        </li>
+    `;
+});
+
 
