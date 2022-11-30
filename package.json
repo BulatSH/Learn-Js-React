@@ -1,0 +1,22 @@
+{
+	"name": "learn-js-react",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/BulatSH/Learn-Js-React.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/BulatSH/Learn-Js-React/issues"
+	},
+	"homepage": "https://github.com/BulatSH/Learn-Js-React#readme",
+	"devDependencies": {
+		"json-server": "^0.17.1"
+	}
+}
