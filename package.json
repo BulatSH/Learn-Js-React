@@ -17,6 +17,9 @@
 	},
 	"homepage": "https://github.com/BulatSH/Learn-Js-React#readme",
 	"devDependencies": {
-		"json-server": "^0.17.1"
+		"install": "^0.13.0",
+		"json-server": "^0.17.1",
+		"webpack": "^5.75.0",
+		"webpack-cli": "^5.0.0"
 	}
 }

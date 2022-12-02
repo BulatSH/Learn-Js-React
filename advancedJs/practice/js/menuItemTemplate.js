@@ -61,51 +61,51 @@ window.addEventListener('DOMContentLoaded', () => {
 		return await res.json();
 	}
 
-	getResource('http://localhost:3000/menu')
-		.then(data => {
-			// Как это работает внутри
-			// data.forEach(obj => {
-			// 	new MenuItemTemplate(
-			// 		obj.altimg,
-			// 		obj.title,
-			// 		obj.descr,
-			// 		obj.price
-			// 	).createMenuItemTemplate();
-			// })
+	// getResource('http://localhost:3000/menu')
+	// 	.then(data => {
+	// 		// Как это работает внутри
+	// 		// data.forEach(obj => {
+	// 		// 	new MenuItemTemplate(
+	// 		// 		obj.altimg,
+	// 		// 		obj.title,
+	// 		// 		obj.descr,
+	// 		// 		obj.price
+	// 		// 	).createMenuItemTemplate();
+	// 		// })
 
-			// Лучше использовать деструктуризацию
-			data.forEach(({ altimg, title, descr, price }) => {
-				new MenuItemTemplate(
-					altimg, title, descr, price, '.menu .container'
-				).createMenuItemTemplate();
-			})
-		});
+	// 		// Лучше использовать деструктуризацию
+	// 		data.forEach(({ altimg, title, descr, price }) => {
+	// 			new MenuItemTemplate(
+	// 				altimg, title, descr, price, '.menu .container'
+	// 			).createMenuItemTemplate();
+	// 		})
+	// 	});
 
 	// Другая реализация
-	// getResource('http://localhost:3000/menu')
-	// 	.then(data => createCard(data));
+	getResource('http://localhost:3000/menu')
+		.then(data => createCard(data));
 
 	// Способ без шаблонизации
-	// function createCard(data) {
-	// 	data.forEach(({ altimg, title, descr, price }) => {
-	// 		const element = document.createElement('div');
+	function createCard(data) {
+		data.forEach(({ altimg, title, descr, price }) => {
+			const element = document.createElement('div');
 
-	// 		element.classList.add('menu__item')
+			element.classList.add('menu__item')
 
-	// 		element.innerHTML = `
-	// 			<img src="img/tabs/${altimg}.jpg" alt="${altimg}">
-	//             <h3 class="menu__item-subtitle">${title}</h3>  
-	//             <div class="menu__item-descr">${descr}</div>
-	//             <div class="menu__item-divider"></div>
-	//             <div class="menu__item-price">
-	//                 <div class="menu__item-cost">Цена:</div>
-	//                 <div class="menu__item-total"><span>${price}</span> грн/день</div>
-	//             </div>
-	// 		`;
+			element.innerHTML = `
+				<img src="img/tabs/${altimg}.jpg" alt="${altimg}">
+	            <h3 class="menu__item-subtitle">${title}</h3>  
+	            <div class="menu__item-descr">${descr}</div>
+	            <div class="menu__item-divider"></div>
+	            <div class="menu__item-price">
+	                <div class="menu__item-cost">Цена:</div>
+	                <div class="menu__item-total"><span>${price}</span> грн/день</div>
+	            </div>
+			`;
 
-	// 		document.querySelector('.menu .container').append(element);
-	// 	});
-	// };
+			document.querySelector('.menu .container').append(element);
+		});
+	};
 
 	// С помощью axios
 	// Получаем более подробный ответ и data мы уже получаем в виде объекта
