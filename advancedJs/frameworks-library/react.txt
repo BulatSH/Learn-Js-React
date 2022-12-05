@@ -1,0 +1,6 @@
+React:
+- node.js
+- препроцессор JSX
+- Babel
+- Webpack
+- React

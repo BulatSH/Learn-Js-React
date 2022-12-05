@@ -1,0 +1,7 @@
+Angular:
+- node.js
+- TypeScript
+- Webpack
+- MVC pattern (Шаблон проектирования)
+- Angular
+// Angular посложнее
